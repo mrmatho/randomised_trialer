@@ -44,7 +44,7 @@ with col1:
 with col2:
   # n = st.slider("Number of Simulations (n):", min_value=1, max_value=10000, value=50)
   n = st.number_input("Number of Simulations (1 - 10,000)", min_value=1, max_value=10000, value= 50)
-  print(n)
+  st.write(n)
   
 sampleNumbers = np.random.choice(opts_name, n, p=prob)
 sampleVals = sorted(dict(Counter(sampleNumbers)))
