@@ -43,4 +43,5 @@ sampleNumbers = np.random.choice(opts_name, n, p=prob)
 sampleVals = dict(Counter(sampleNumbers))
 st.table(sampleVals)
 
+st.subheader("Chart of values")
 st.bar_chart(sampleVals)
