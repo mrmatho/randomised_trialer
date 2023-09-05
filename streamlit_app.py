@@ -3,6 +3,7 @@ import altair as alt
 import pandas as pd
 import streamlit as st
 import numpy as np
+from collections import Counter
 
 st.title("Randomised Trialer")
 st.header("Randomly generate your own simulations in probability", divider="rainbow")
@@ -39,4 +40,4 @@ st.altair_chart(pie, use_container_width=False, theme=None)
 
 n = st.slider("Number of Simulations (n):", min_value=1, max_value=1000, value=50)
 sampleNumbers = np.random.choice(opts_name, n, p=prob)
-sampleNumbers
+Counter(sampleNumbers)
