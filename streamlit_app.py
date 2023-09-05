@@ -15,7 +15,7 @@ st.header("Randomly generate probability simulations", divider="rainbow")
 
 with st.sidebar:
   
-  opts_n = st.slider("Number of Options", min_value=2, max_value=10, value=3)
+  opts_n = st.slider("Number of Options", min_value=2, max_value=20, value=4)
   variable_prob = st.toggle('Use Variable Probabilities')
   
   opts_name = []
