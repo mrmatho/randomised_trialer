@@ -42,7 +42,9 @@ with col1:
   st.altair_chart(pie, use_container_width=True, theme=None)
 
 with col2:
-  n = st.slider("Number of Simulations (n):", min_value=1, max_value=10000, value=50)
+  # n = st.slider("Number of Simulations (n):", min_value=1, max_value=10000, value=50)
+  n = st.number_input("Number of Simulations (1 - 10,000)", min = 1, max = 10000, value=50)
+  
 sampleNumbers = np.random.choice(opts_name, n, p=prob)
 sampleVals = sorted(dict(Counter(sampleNumbers)))
   
