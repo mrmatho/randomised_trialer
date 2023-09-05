@@ -6,7 +6,7 @@ import streamlit as st
 import streamlit as st
 
 st.title("Randomised Trialer")
-st.header("Randomly generate your own simlations in probability", divider="rainbow")
+st.header("Randomly generate your own simulations in probability", divider="rainbow")
 
 with st.sidebar:
   
@@ -15,15 +15,20 @@ with st.sidebar:
   
   opts_name = []
   opts_val = []
-  
+
+  total = 0
   for i in range(1, opts_n + 1):
     opts_name.append(st.text_input(f"Option {i} Name:", value=f"Option {i}"))
     if variable_prob:
-      opts_val.append(st.slider(f"How many for option {i}?", min_value=1, max_value=20, value=1))
+      n = st.slider(f"How many for option {i}?", min_value=1, max_value=20, value=1)
+      opts_val.append(n)
+      total += n
     else:
       opts_val.append(1)
-  
-  pie_source = pd.DataFrame({"category": opts_name, "value": opts_val})
+      total += 1
+
+  prob = [x / total for x in opts_val]
+  pie_source = pd.DataFrame({"category": opts_name, "value": prob})
 
 
 pie = alt.Chart(pie_source).mark_arc().encode(
@@ -31,5 +36,8 @@ pie = alt.Chart(pie_source).mark_arc().encode(
     color="category"
 )
 st.header("As a spinner")
-st.altair_chart(pie, use_container_width=False)
+st.altair_chart(pie, use_container_width=False, theme=None)
 
+n = st.slider("Number of Simulations (n):")
+sampleNumbers = np.random.choice(opts_name, n, p=prob)
+st.magic(sampleNumbers)
