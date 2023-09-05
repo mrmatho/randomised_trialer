@@ -4,7 +4,6 @@ import pandas as pd
 import streamlit as st
 import numpy as np
 from collections import Counter
-from collections import OrderedDict
 
 
 st.set_page_config(
@@ -64,8 +63,7 @@ with col3:
 
 with col4:
   st.subheader("Results Table")
-  outTable = OrderedDict(sorted(sampleVals.items()))
-  st.table(sorted(outTable))
+  st.table(sorted(sampleVals))
   st.subheader("Full set of results (in order)")
   st.write(sampleNumbers)
   
