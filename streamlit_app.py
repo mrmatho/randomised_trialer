@@ -11,5 +11,5 @@ opts_name = []
 opts_val = []
 
 for i in range(1, opts_n + 1):
-  opts_name.append(st.text_input("Option Name:"))
+  opts_name.append(st.text_input(f"Option {i} Name:", value=f"Option {i}"))
   
