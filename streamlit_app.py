@@ -46,3 +46,5 @@ st.table(sampleVals)
 
 st.subheader("Chart of values")
 st.bar_chart(sampleVals)
+
+st.write(sampleNumbers)
