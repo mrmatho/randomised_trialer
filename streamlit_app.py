@@ -56,8 +56,8 @@ with col3:
   st.bar_chart(sampleVals)
 
 with col4:
-  st.subheading("Results Table")
+  st.subheader("Results Table")
   st.table(sampleVals)
-  st.subheading("Full set of results (in order)")
+  st.subheader("Full set of results (in order)")
   st.write(sampleNumbers)
   
