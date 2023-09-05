@@ -61,7 +61,7 @@ with col3:
 
 with col4:
   st.subheader("Results Table")
-  st.table(sampleVals)
+  st.table(sorted(sampleVals))
   st.subheader("Full set of results (in order)")
   st.write(sampleNumbers)
   
