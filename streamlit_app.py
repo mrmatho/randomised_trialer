@@ -22,7 +22,10 @@ for i in range(1, opts_n + 1):
 
 pie_source = pd.DataFrame({"category": opts_name, "value": opts_val})
 
-alt.Chart(pie_source).mark_arc().encode(
+pie = alt.Chart(pie_source).mark_arc().encode(
     theta="value",
     color="category"
 )
+st.header("As a spinner")
+st.altair_chart(pie, use_container_width=False)
+
