@@ -61,7 +61,8 @@ with col3:
 
 with col4:
   st.subheader("Results Table")
-  st.table(sorted(sampleVals))
+  outTable = OrderedDict(sorted(sampleVals.items()))
+  st.table(sorted(outTable))
   st.subheader("Full set of results (in order)")
   st.write(sampleNumbers)
   
