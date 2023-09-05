@@ -4,7 +4,12 @@ import pandas as pd
 import streamlit as st
 import numpy as np
 from collections import Counter
-
+st.set_page_config(
+    page_title="Randomised Trialer",
+    page_icon="🧊",
+    layout="wide",
+    initial_sidebar_state="expanded"
+)
 #st.title("Randomised Trialer")
 st.header("Randomly generate probability simulations", divider="rainbow")
 
