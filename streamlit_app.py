@@ -6,7 +6,7 @@ import numpy as np
 from collections import Counter
 
 st.title("Randomised Trialer")
-st.header("Randomly generate your own simulations in probability", divider="rainbow")
+st.header("Randomly generate probability simulations", divider="rainbow")
 
 with st.sidebar:
   
@@ -39,7 +39,7 @@ pie = alt.Chart(pie_source).mark_arc().encode(
 st.subheader("As a spinner")
 st.altair_chart(pie, use_container_width=False, theme=None)
 
-n = st.slider("Number of Simulations (n):", min_value=1, max_value=1000000, value=50)
+n = st.slider("Number of Simulations (n):", min_value=1, max_value=10000, value=50)
 sampleNumbers = np.random.choice(opts_name, n, p=prob)
 sampleVals = dict(Counter(sampleNumbers))
 st.table(sampleVals)
