@@ -43,9 +43,9 @@ with col1:
 
 with col2:
   n = st.slider("Number of Simulations (n):", min_value=1, max_value=10000, value=50)
-  sampleNumbers = np.random.choice(opts_name, n, p=prob)
-  sampleVals = dict(Counter(sampleNumbers))
-  st.table(sampleVals)
+sampleNumbers = np.random.choice(opts_name, n, p=prob)
+sampleVals = sorted(dict(Counter(sampleNumbers)))
+  
 
 st.subheader("Simulation Results")
 col3, col4 = st.columns(2)
@@ -54,3 +54,4 @@ with col3:
 
 with col4:
   st.write(sampleNumbers)
+  st.table(sampleVals)
