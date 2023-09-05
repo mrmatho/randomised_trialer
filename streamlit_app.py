@@ -38,6 +38,6 @@ pie = alt.Chart(pie_source).mark_arc().encode(
 st.header("As a spinner")
 st.altair_chart(pie, use_container_width=False, theme=None)
 
-n = st.slider("Number of Simulations (n):")
+n = st.slider("Number of Simulations (n):", min_value=1, max_value=1000, value=50)
 sampleNumbers = np.random.choice(opts_name, n, p=prob)
 st.magic(sampleNumbers)
