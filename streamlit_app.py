@@ -51,7 +51,6 @@ with col2:
   n = st.number_input("Number of Simulations (1 - 10,000)", min_value=1, max_value=10000, value= 50)
   
 sampleNumbers = np.random.choice(opts_name, n, p=prob)
-st.write(len(sampleNumbers))
 sampleVals = dict(Counter(sampleNumbers))
   
 
