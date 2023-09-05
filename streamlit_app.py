@@ -2,8 +2,7 @@ from collections import namedtuple
 import altair as alt
 import pandas as pd
 import streamlit as st
-
-import streamlit as st
+import numpy as np
 
 st.title("Randomised Trialer")
 st.header("Randomly generate your own simulations in probability", divider="rainbow")
