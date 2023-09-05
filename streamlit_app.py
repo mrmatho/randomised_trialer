@@ -18,9 +18,10 @@ with st.sidebar:
 
   total = 0
   for i in range(1, opts_n + 1):
-    opts_name.append(st.text_input(f"Option{i} Name:", value=f"Option{i}"))
+    name = st.text_input(f"Option{i} Name:", value=f"Option{i}")
+    opts_name.append(name)
     if variable_prob:
-      n = st.slider(f"How many for option{i}?", min_value=1, max_value=20, value=1)
+      n = st.slider(f"How many for {name}?", key=f"option{i}" min_value=1, max_value=20, value=1)
       opts_val.append(n)
       total += n
     else:
