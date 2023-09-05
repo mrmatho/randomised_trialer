@@ -40,4 +40,7 @@ st.altair_chart(pie, use_container_width=False, theme=None)
 
 n = st.slider("Number of Simulations (n):", min_value=1, max_value=1000, value=50)
 sampleNumbers = np.random.choice(opts_name, n, p=prob)
-st.write(Counter(sampleNumbers))
+sampleVals = Counter(sampleNumbers)
+st.table(sampleVals)
+
+st.bar_chart(sampleVals)
