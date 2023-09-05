@@ -48,6 +48,7 @@ with col2:
   st.write(n)
   
 sampleNumbers = np.random.choice(opts_name, n, p=prob)
+st.write(len(sampleNumbers))
 sampleVals = sorted(dict(Counter(sampleNumbers)))
   
 
