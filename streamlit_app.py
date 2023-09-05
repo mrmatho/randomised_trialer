@@ -5,7 +5,7 @@ import streamlit as st
 import numpy as np
 from collections import Counter
 
-st.title("Randomised Trialer")
+#st.title("Randomised Trialer")
 st.header("Randomly generate probability simulations", divider="rainbow")
 
 with st.sidebar:
