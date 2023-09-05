@@ -36,15 +36,21 @@ pie = alt.Chart(pie_source).mark_arc().encode(
     theta="value",
     color="category"
 )
-st.subheader("As a spinner")
-st.altair_chart(pie, use_container_width=False, theme=None)
+col1, col2 = st.columns(2)
+with col1:
+  st.subheader("As a spinner")
+  st.altair_chart(pie, use_container_width=True, theme=None)
 
-n = st.slider("Number of Simulations (n):", min_value=1, max_value=10000, value=50)
-sampleNumbers = np.random.choice(opts_name, n, p=prob)
-sampleVals = dict(Counter(sampleNumbers))
-st.table(sampleVals)
+with col2:
+  n = st.slider("Number of Simulations (n):", min_value=1, max_value=10000, value=50)
+  sampleNumbers = np.random.choice(opts_name, n, p=prob)
+  sampleVals = dict(Counter(sampleNumbers))
+  st.table(sampleVals)
 
-st.subheader("Chart of values")
-st.bar_chart(sampleVals)
+col3, col4 = st.columns(2)
+with col3:
+  st.subheader("Chart of values")
+  st.bar_chart(sampleVals)
 
-st.write(sampleNumbers)
+with col4:
+  st.write(sampleNumbers)
