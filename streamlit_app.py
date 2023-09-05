@@ -8,7 +8,7 @@ import streamlit as st
 st.title("Randomised Trialer")
 st.header("Randomly generate your own simlations in probability", divider="rainbow")
 
-with st.sidebar():
+with st.sidebar:
   
   opts_n = st.slider("Number of Options", min_value=2, max_value=10, value=2)
   variable_prob = st.toggle('Use Variable Probabilities')
