@@ -38,7 +38,7 @@ pie = alt.Chart(pie_source).mark_arc().encode(
 )
 col1, col2 = st.columns(2)
 with col1:
-  st.subheader("As a spinner")
+  st.subheader("Theoretical Probability")
   st.altair_chart(pie, use_container_width=True, theme=None)
 
 with col2:
@@ -47,9 +47,9 @@ with col2:
   sampleVals = dict(Counter(sampleNumbers))
   st.table(sampleVals)
 
+st.subheader("Simulation Results")
 col3, col4 = st.columns(2)
 with col3:
-  st.subheader("Chart of values")
   st.bar_chart(sampleVals)
 
 with col4:
