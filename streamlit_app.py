@@ -16,7 +16,7 @@ st.set_page_config(
 st.header("Randomly generate probability simulations", divider="rainbow")
 
 with st.sidebar:
-  st.subheader("Set up the Simulation")
+  st.header("Set up the Simulation")
   opts_n = st.slider("Number of Options", min_value=2, max_value=20, value=4)
   variable_prob = st.toggle('Use Variable Probabilities')
   
