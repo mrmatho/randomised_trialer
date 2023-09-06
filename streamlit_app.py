@@ -63,7 +63,7 @@ sampleVals = pd.DataFrame( {
 st.subheader("Simulation Results")
 col3, col4 = st.columns(2)
 with col3:
-  st.bar_chart(sampleVals)
+  st.bar_chart(sampleVals, x="Selection", y="Frequency")
 
 with col4:
   st.subheader("Results Table")
