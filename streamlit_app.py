@@ -53,6 +53,19 @@ with col2:
   n = st.number_input("Number of Simulations (1 - 10,000)", min_value=1, max_value=10000, value= 50)
   
 sampleNumbers = np.random.choice(opts_name, n, p=prob)
+
+# Changing the way I'm counting to put it in a data frame
+freq = []
+for nam in opt_names:
+  freq.append(sampleNumbers.count(nam))
+
+sampleVals = pd.DataFrame( {
+  "Selection": opts_name,
+  "Frequency": freq
+})
+
+#load data into a DataFrame object:
+df = pd.DataFrame(data)
 sampleVals = dict(Counter(sampleNumbers))
   
 
