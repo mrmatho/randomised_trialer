@@ -58,11 +58,7 @@ unique_vals, counts = np.unique(sampleNumbers, return_counts=True)
 sampleVals = pd.DataFrame( {
   "Selection": unique_vals,
   "Frequency": counts
-})
-
-
-sampleVals = dict(Counter(sampleNumbers))
-  
+})  
 
 st.subheader("Simulation Results")
 col3, col4 = st.columns(2)
