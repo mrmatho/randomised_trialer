@@ -53,11 +53,16 @@ with col2:
   n = st.number_input("Number of Simulations (1 - 10,000)", min_value=1, max_value=10000, value= 50)
   
 sampleNumbers = np.random.choice(opts_name, n, p=prob)
-unique_vals, counts = np.unique(sampleNumbers, return_counts=True)
+
+sl = list(sampleNumbers)
+counts = []
+for name in opts_name:
+  counts.append(sl.count(name))
 
 sampleVals = pd.DataFrame( {
   "Selection": unique_vals,
-  "Frequency": counts
+  "Frequency": counts, 
+  "Theoretical Probability": prob
 })  
 
 st.subheader("Simulation Results")
