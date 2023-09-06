@@ -74,20 +74,20 @@ with col3:
   bar = alt.Chart(sampleVals).mark_bar().encode(
     x='Selection',
     y='Frequency'
-)
+  )
 
-tick = alt.Chart(sampleVals).mark_tick(
-    color='red',
-    thickness=2,
-    size=40 * 0.9,  # controls width of tick.
-).encode(
-    x='Selection',
-    y='Theoretical Probability'
-)
+  tick = alt.Chart(sampleVals).mark_tick(
+      color='red',
+      thickness=2,
+      size=40 * 0.9,  # controls width of tick.
+  ).encode(
+      x='Selection',
+      y='Theoretical Probability'
+  )
 
-c = bar + tick
-st.altair_chart(c, use_container_width=True, theme=None)
-  
+  c = bar + tick
+  st.altair_chart(c, use_container_width=True, theme=None)
+    
 
 with col4:
   st.subheader("Results Table")
