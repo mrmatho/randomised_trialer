@@ -60,7 +60,7 @@ for name in opts_name:
   counts.append(sl.count(name))
 
 sampleVals = pd.DataFrame( {
-  "Selection": unique_vals,
+  "Selection": opts_name,
   "Frequency": counts, 
   "Theoretical Probability": prob
 })  
