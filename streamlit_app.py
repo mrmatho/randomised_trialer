@@ -65,6 +65,8 @@ sampleVals = pd.DataFrame( {
   "Theoretical Probability": prob
 })  
 
+sampleVals['Theoretical Probability'] = sampleVals['Theoretical Probability'] * n
+
 st.subheader("Simulation Results")
 col3, col4 = st.columns(2)
 with col3:
