@@ -56,7 +56,7 @@ sampleNumbers = np.random.choice(opts_name, n, p=prob)
 
 # Changing the way I'm counting to put it in a data frame
 freq = []
-for nam in opt_names:
+for nam in opts_name:
   freq.append(sampleNumbers.count(nam))
 
 sampleVals = pd.DataFrame( {
