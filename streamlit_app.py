@@ -68,7 +68,24 @@ sampleVals = pd.DataFrame( {
 st.subheader("Simulation Results")
 col3, col4 = st.columns(2)
 with col3:
-  st.bar_chart(sampleVals, x="Selection", y="Frequency")
+  # Trying out a bar chart with tick marks from altair
+  bar = alt.Chart(sampleVals).mark_bar().encode(
+    x='Selection',
+    y='Frequency'
+)
+
+tick = alt.Chart(source).mark_tick(
+    color='red',
+    thickness=2,
+    size=40 * 0.9,  # controls width of tick.
+).encode(
+    x='Selection',
+    y='Theoretical Probabiliy'
+)
+
+c = bar + tick
+st.altair_chart(c, use_container_width=True, theme=None)
+  
 
 with col4:
   st.subheader("Results Table")
