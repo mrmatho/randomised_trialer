@@ -64,8 +64,7 @@ sampleVals = pd.DataFrame( {
   "Frequency": freq
 })
 
-#load data into a DataFrame object:
-df = pd.DataFrame(data)
+
 sampleVals = dict(Counter(sampleNumbers))
   
 
