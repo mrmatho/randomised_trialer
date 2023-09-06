@@ -12,8 +12,8 @@ st.set_page_config(
     layout="wide",
     initial_sidebar_state="expanded"
 )
-#st.title("Randomised Trialer")
-st.header("Randomly generate probability simulations", divider="rainbow")
+st.title("Mr Matheson's Randomised Trialer")
+st.subheader("Randomly generate probability simulations", divider="rainbow")
 
 with st.sidebar:
   st.header("Set up the Simulation")
@@ -63,7 +63,7 @@ with col3:
 
 with col4:
   st.subheader("Results Table")
-  st.table(sampleVals)
+  st.dataframe(sampleVals)
   st.subheader("Full set of results (in order)")
   st.write(sampleNumbers)
   
