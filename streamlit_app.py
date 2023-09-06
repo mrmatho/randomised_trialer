@@ -74,7 +74,7 @@ with col3:
     y='Frequency'
 )
 
-tick = alt.Chart(source).mark_tick(
+tick = alt.Chart(sampleVals).mark_tick(
     color='red',
     thickness=2,
     size=40 * 0.9,  # controls width of tick.
