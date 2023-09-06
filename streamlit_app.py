@@ -8,7 +8,7 @@ from collections import Counter
 
 st.set_page_config(
     page_title="Randomised Trialer",
-    page_icon="🧊",
+    page_icon="🎲",
     layout="wide",
     initial_sidebar_state="expanded"
 )
