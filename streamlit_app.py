@@ -80,7 +80,7 @@ tick = alt.Chart(sampleVals).mark_tick(
     size=40 * 0.9,  # controls width of tick.
 ).encode(
     x='Selection',
-    y='Theoretical Probabiliy'
+    y='Theoretical Probability'
 )
 
 c = bar + tick
