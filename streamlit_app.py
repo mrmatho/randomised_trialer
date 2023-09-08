@@ -65,7 +65,7 @@ sampleVals = pd.DataFrame( {
   "Theoretical Probability": prob
 })  
 
-sampleVals['Theoretical Probability'] = sampleVals['Theoretical Probability'] * n
+sampleVals['Expected Value'] = sampleVals['Theoretical Probability'] * n
 
 st.subheader("Simulation Results")
 col3, col4 = st.columns(2)
@@ -82,7 +82,7 @@ with col3:
       size=40 * 0.9,  # controls width of tick.
   ).encode(
       x='Selection',
-      y='Theoretical Probability'
+      y='Expected Value'
   )
 
   c = bar + tick
